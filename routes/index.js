@@ -43,13 +43,6 @@ router.get("/recipes/details",
   myRender("recipes/recipe.hbs",["recipes","comments"])
 )
 
-router.get(
-  "/recipes/any",
-  myFetch(RecipeModel,"recipes").findOne,
-  myFetch(CommentModel,"comments").find,
-  //mySender(["recipes","comments"]),
-  myRender("recipes/recipe.hbs",["recipes","comments"])
-);
 
 
 

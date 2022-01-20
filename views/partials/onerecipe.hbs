@@ -1,19 +1,45 @@
-<h2>{{name}}</h2>
-<ul>
-    <li>Description: {{description}} </li>
-    <li>Temperature: {{temperature}} </li>
-    <li>Grind: {{grind}} </li>
-    <li>Weight: {{weight}}</li>
-    <li>Water: {{water}}</li>
-    <li>Extraction: {{extraction}}</li>
-    <li>Infusion
-        <ol>
-            {{#each infusion}}
-            <li>{{this.volume}} mL during {{this.time}} seconds</li>
-            {{/each}}
-        </ol>
-    </li>
-</ul>
+<h1>{{name}}</h1>
+<h2>{{description}} </h2>
+<div class="blocks">
+
+    <div class = "block">
+        <h3><i class="fas fa-mortar-pestle"></i></h3>
+        <h3>Café</h3>
+        <ul>
+            <li>Grind: {{grind}} </li>
+            <li>Weight: {{weight}}</li>
+        </ul>
+    </div>
+
+    <div class = "block">
+        <h3><i class="fas fa-tint"></i></h3>
+        <h3>Eau</h3>
+            <ul>
+                <li>Température: {{temperature}} </li>
+                <li>Type d'eau: {{water}}</li>
+            </ul>
+    </div>
+
+    
+</div>
+
+<div class="blocks">
+    <div class = "block">
+        <h3><i class="fas fa-glass-whiskey"></i></h3>
+        <h3>Extraction</h3>
+            <ul>
+                <li>Méthode: {{extraction}}</li>
+                <li>Infusion
+                    <ol>
+                        {{#each infusion}}
+                        <li>{{this.volume}} mL during {{this.time}} seconds</li>
+                        {{/each}}
+                    </ol>
+                </li>
+            </ul>
+    </div>
+
+</div>
 
 <form method="post"><h2>Add your comments!</h2>
     <input type="text" id="comment" name="content" value="add your comments">

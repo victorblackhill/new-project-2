@@ -37,9 +37,9 @@ a {
     font-family: var(--alondra-font-simple), Arial, Helvetica, sans-serif;
   }
 
-body {
 
-    
+h1,h2 {
+  padding-left : 10px
 }
 
  h2 {
@@ -48,6 +48,68 @@ body {
 }
 
 footer {
-   font-size:8px
+  font-size:8px
 }
+
+
+/* 
+  Blocks styling
+*/
+
+.blocks{
+  display:flex;
+}
+
+.block{
+  background-color: var(--alondra-teal);
+  margin:10px;
+  padding:10px;
+}
+
+h3 {
+  font-family: var(--alondra-font-complex),Arial, Helvetica, sans-serif;
+  color: var(--alondra-orange);
+  align-self: center;
+  text-align: center;
+} 
+
+i {
+  margin:3px;
+}
+
+.block ul{
+  list-style-type:none;
+  align-self:center;
+  padding-inline-start:0;
+}
+
+/* Comments*/
+.comments ul{
+  list-style-type:none;
+  padding-inline-start:0;
+  
+}
+
+.comments li {
+  background-color: var(--alondra-teal);
+  margin:10px;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  word-wrap: break-word
+}
+
+.comments span{
+  max-width:300px
+}
+.comments i{
+  align-self: flex-start
+}
+
+.comments{
+  width:400px
+}
+
+
+
 
