@@ -1,0 +1,12 @@
+
+
+<ul id="comment-list">
+    {{#each this}}
+    <li id={{this._id}} >
+        <span data-commentid={{this.id}}>{{this.content}}</span>
+        <i class="fa fa-trash delete" data-commentid={{this.id}} ></i>
+        <i class="fa fa-pen update" data-commentid={{this.id}} ></i>
+    </li>
+    {{/each}}
+</ul>
+
