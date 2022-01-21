@@ -19,7 +19,8 @@ function appendComment(comment){
     const li = document.createElement("li");
     //const i = document.createElement("i")
     
-    li.innerHTML = '<span></span> <i class="fa fa-trash"></i> <i class="fa fa-pen"></i>'
+    li.innerHTML = '<span></span> <i class="fa fa-trash"></i>'
+    //<i class="fa fa-pen"></i>'
 
     li.setAttribute("id",comment._id)
     li.querySelector('span').textContent = comment.content
@@ -29,8 +30,8 @@ function appendComment(comment){
     li.querySelector("i.fa-trash").classList.toggle("delete")
     li.querySelector("i.fa-trash").onclick = deleteComment
 
-    li.querySelector("i.fa-pen").setAttribute("data-commentId",comment._id)
-    li.querySelector("i.fa-pen").classList.toggle("update")
+    //li.querySelector("i.fa-pen").setAttribute("data-commentId",comment._id)
+    //li.querySelector("i.fa-pen").classList.toggle("update")
 
 
     setCommentListeners(li)
@@ -126,7 +127,7 @@ commentBtn.onclick = sendComment
 
 const setCommentListeners = (comment)=>{
     comment.querySelector("i.delete").onclick = deleteComment
-    comment.querySelector("i.update").onclick = updateComment
+    //comment.querySelector("i.update").onclick = updateComment
     comment.querySelector("span").ondblclick = openComment
     comment.querySelector("span").onblur = closeComment
     comment.querySelector("span").onblur = updateComment

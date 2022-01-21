@@ -23,7 +23,7 @@ a {
 :root{
     --alondra-green:#234145;
     --alondra-orange:#e5a959;
-    --alondra-gray:#ede9e1;
+    --alondra-gray: #ede9e1;
     --alondra-teal:#ecdcdb;
 
 
@@ -35,6 +35,7 @@ a {
     background-color: var(--alondra-gray);
     color: var(--alondra-green);
     font-family: var(--alondra-font-simple), Arial, Helvetica, sans-serif;
+    max-width:fit-content;
   }
 
 
@@ -53,17 +54,21 @@ footer {
 
 
 /* 
-  Blocks styling
+  Blocks styling -----------------------------------
 */
 
 .blocks{
   display:flex;
+  flex-wrap: wrap;
+  justify-content: center
 }
 
 .block{
   background-color: var(--alondra-teal);
   margin:10px;
   padding:10px;
+  width: 250px
+
 }
 
 h3 {
@@ -80,10 +85,21 @@ i {
 .block ul{
   list-style-type:none;
   align-self:center;
-  padding-inline-start:0;
+  padding-inline-start:0px;
 }
 
-/* Comments*/
+.block ol{
+  
+  align-self:center;
+  padding-inline-start:15px;
+}
+
+.block ul>li{
+  margin-bottom: 10px;
+
+}
+
+/* Comments ----------------------------------------------*/
 .comments ul{
   list-style-type:none;
   padding-inline-start:0;
@@ -99,16 +115,52 @@ i {
   word-wrap: break-word
 }
 
-.comments span{
-  max-width:300px
-}
+
 .comments i{
   align-self: flex-start
 }
 
-.comments{
-  width:400px
+.comments ul{
+  display:flex;
+  flex-direction:column-reverse
 }
+
+
+/* Input comment block ------------------------------------*/ 
+.block-comment{
+
+  word-wrap: break-word;
+  background-color: var(--alondra-teal);
+  margin:10px;
+  padding:10px;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.block-comment input,button{
+  color: var(--alondra-green);
+  border-width: thin;
+}
+
+.block-comment input{
+  width:95%;
+  font-family:var(--alondra-font-simple);
+  margin-left:0px;
+  border-color: var(--alondra-gray);
+}
+
+.block-comment button{
+  background-color: var(--alondra-teal);
+  font-family:var(--alondra-font-complex);
+  border-color: var(--alondra-teal);
+  color:var(--alondra-orange);
+  font-variant: bold;
+  width:100px;
+  height:35px
+
+}
+
 
 
 

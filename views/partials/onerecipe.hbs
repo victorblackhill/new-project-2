@@ -21,9 +21,7 @@
     </div>
 
     
-</div>
 
-<div class="blocks">
     <div class = "block">
         <h3><i class="fas fa-glass-whiskey"></i></h3>
         <h3>Extraction</h3>
@@ -41,8 +39,12 @@
 
 </div>
 
-<form method="post"><h2>Add your comments!</h2>
-    <input type="text" id="comment" name="content" value="add your comments">
-    <input id="recipe" type="hidden" name="recipe" value="{{_id}}">
-    <button type="button" id="btn-comment">Comment</button>
-</form>
+
+    <h2>Comments</h2>
+
+<div class = "block-comment">
+
+        <input class="block" type="text" id="comment" name="content" value="add your comments">
+        <input id="recipe" type="hidden" name="recipe" value="{{_id}}">
+        <button type="button" id="btn-comment">Comment</button>
+</div>

@@ -10,7 +10,7 @@ const { Router } = require("express");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+  res.redirect("/recipes/index");
 });
 
 router.get("/recipes/:id([a-f0-9]{24})", 
