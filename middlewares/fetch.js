@@ -41,7 +41,6 @@ const myFetch =  (myModule, key = "myFetch") => {
       }
     },
 
-    //other methods are going to be added here
     find: async function(req,res,next){
       try{
         const request =  !req.request || isEmpty(req.request) ? !req.body || isEmpty(req.body) ? {} : req.body : req.request 
