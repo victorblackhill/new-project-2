@@ -29,6 +29,8 @@ app.use(express.json()) // several async requests
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+//deactivated while we don't have a user model
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

@@ -144,7 +144,7 @@ i {
 }
 
 .block-comment input{
-  width:95%;
+  width:90%;
   font-family:var(--alondra-font-simple);
   margin-left:0px;
   border-color: var(--alondra-gray);
