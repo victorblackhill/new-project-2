@@ -22,6 +22,9 @@ const recipesSeed = [
             },
             {volume:100,
                 time:40
+            },
+            {volume:0,
+                time:60
             }
         ]
     },
@@ -48,6 +51,49 @@ const recipesSeed = [
                 time:30
             },
             {volume:100,
+                time:30
+            },
+            {volume:0,
+                time:60
+            },
+        ]
+    },
+    {
+        name : "Piston français",
+        temperature :90,
+        grind:25,
+        weight:18,
+        water:"Grandbarbier",
+        extraction:"Piston",
+        description:"A préparer avec piston 350 mL",
+        infusion:[
+            {volume:50,
+                time:30
+            },
+            {volume:300,
+                time:30
+            },
+            {volume:0,
+                time:180
+            },
+        ]
+    },
+    {
+        name : "Aeropress forte",
+        temperature :92,
+        grind:12,
+        weight:18,
+        water:"Volvic",
+        extraction:"Aeropress",
+        description:"Pour débutant aéropressn, extraire rapidement à la fin de l'infustion",
+        infusion:[
+            {volume:50,
+                time:30
+            },
+            {volume:150,
+                time:30
+            },
+            {volume:0,
                 time:30
             },
         ]
