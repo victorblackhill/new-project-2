@@ -6,7 +6,7 @@ const myFetch = require("../middlewares/fetch");
 const mySender = require("../middlewares/renderHelp").mySender;
 const myRender = require("../middlewares/renderHelp").myRender;
 const myRedirect = require("../middlewares/renderHelp").myRedirect;
-const { Router } = require("express");
+
 
 /* GET home page. */
 router.get("/", function (req, res, next) {

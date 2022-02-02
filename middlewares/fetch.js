@@ -43,8 +43,9 @@ const myFetch =  (myModule, key = "myFetch") => {
 
     find: async function(req,res,next){
       try{
+        console.log(">> >> >>",req.body)
         const request =  !req.request || isEmpty(req.request) ? !req.body || isEmpty(req.body) ? {} : req.body : req.request 
-        
+    
         //check if the request is empty
         const searched = isEmpty(request)? await myModule.find() : await myModule.find(request)
         req[key] = searched
