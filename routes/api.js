@@ -16,13 +16,13 @@ router.get(
   mySender(["recipes"])
 );
 
-router.get(
+router.post(
   "/recipes/details",
   myFetch(RecipeModel, "recipes").find,
-  mySender(["recipes"])
+  mySender(["recipes","body"])
 );
 
-router.get(
+router.post(
   "/recipes/comments",
   myFetch(CommentModel, "comments").find,
   mySender(["body", "comments"])
