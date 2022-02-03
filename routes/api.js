@@ -28,4 +28,13 @@ router.post(
   mySender(["body", "comments"])
 );
 
+router.post("/comment/:id([a-f0-9]{24})",
+myFetch(CommentModel).create,
+mySender())
+
+router.post("/comment/delete",
+myFetch(CommentModel).delete,
+mySender())
+
+
 module.exports = router;
