@@ -1,4 +1,3 @@
-const { Schema } = require("mongoose")
 const seedStuff = require("./../middlewares/seedStuff")
 const RecipeModel = require("./../models/Recipe.model")
 
