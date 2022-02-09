@@ -15,11 +15,11 @@ function isEmpty(obj) {
   return JSON.stringify(obj) === JSON.stringify({});
 }
 
-const myFetch =  (myModule, key = "myFetch") => {
+const myFetch =  (myModule, key = "myFetch",toPopulate=null) => {
   return {
     findOne: async function (req, res, next) {
       try {
-        const anyOne = await myModule.findOne();
+        const anyOne = req.body[toPopulate] ? await myModule.findOne().populate(toPopulate) : await myModule.findOne();
         req[key] = anyOne
 
         //creates the mongoDB request corresponding to the search
@@ -47,7 +47,8 @@ const myFetch =  (myModule, key = "myFetch") => {
         const request =  !req.request || isEmpty(req.request) ? !req.body || isEmpty(req.body) ? {} : req.body : req.request 
     
         //check if the request is empty
-        const searched = isEmpty(request)? await myModule.find() : await myModule.find(request)
+        const searched = isEmpty(request)? await myModule.find() : toPopulate ? await myModule.find(request).populate(toPopulate): await myModule.find(request)
+        console.log("< > < >",searched)
         req[key] = searched
         next()
       }catch(err){

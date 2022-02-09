@@ -18,6 +18,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+require("./config/cors")(app)
 
 //Passport configuration -- ------  --------- ------------  ----------- ------------------------------------------------------------
 // Packages used for authentication (Session & Passport)
@@ -43,11 +44,7 @@ app.use(passport.session());
 //Passport configuration -- ------  --------- ------------  ----------- ------------------------------------------------------------
 
 
-// Cors configuration
-  // to narrow the allowed localhost :cors({origin: "http://localhost:3000",})
-  app.use(
-    cors({origin: "http://localhost:3000",})
-  );
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -66,6 +63,7 @@ app.use('/api', apiRouter);
 // ROUTES MIDDLEWARE STARTS HERE:
  
 const authRouter = require('./routes/auth'); // <== has to be added
+const { use } = require("passport");
 app.use('/api', authRouter); // <== has to be added
 
 

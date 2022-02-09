@@ -12,7 +12,12 @@ const commentSchema = new Schema ({
     },
     user:{
         type:Schema.Types.ObjectId,
-        ref:"recipes",
+        ref:"users",
+        required:true
+    },
+    date:{
+        type:Date,
+        default: Date.now()
     }
 })
 

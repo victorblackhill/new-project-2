@@ -24,7 +24,7 @@ router.post(
 
 router.post(
   "/recipes/comments",
-  myFetch(CommentModel, "comments").find,
+  myFetch(CommentModel, "comments","user").find,
   mySender(["body", "comments"])
 );
 
