@@ -36,5 +36,7 @@ router.post("/comment/delete",
 myFetch(CommentModel).delete,
 mySender())
 
+router.post("/comment/update",myFetch(CommentModel).update,mySender())
+
 
 module.exports = router;
