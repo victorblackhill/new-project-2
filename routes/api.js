@@ -2,8 +2,10 @@ var express = require("express");
 var router = express.Router();
 const RecipeModel = require("../models/Recipe.model");
 const CommentModel = require("../models/Comment.model");
+const UserModel = require("../models/User.model")
 const myFetch = require("../middlewares/fetch");
 const mySender = require("../middlewares/renderHelp").mySender;
+
 
 //const myRedirect = require("../middlewares/renderHelp").myRedirect;
 
@@ -37,6 +39,8 @@ myFetch(CommentModel).delete,
 mySender())
 
 router.post("/comment/update",myFetch(CommentModel).update,mySender())
+
+router.post("/user/update",myFetch(UserModel).update,mySender())
 
 
 module.exports = router;

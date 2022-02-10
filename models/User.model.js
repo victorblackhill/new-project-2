@@ -7,7 +7,12 @@ userSchema = new Schema({
         type:mongoose.SchemaTypes.Email,
         unique:true
     },
-    password:String
+    password:String,
+    favorites:{
+        type:[Schema.Types.ObjectId],
+        ref:"recipes",
+        default:[]
+    }
 })
 
 const UserModel = model("users",userSchema)
